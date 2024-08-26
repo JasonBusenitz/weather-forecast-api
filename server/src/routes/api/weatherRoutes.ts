@@ -1,7 +1,7 @@
 import { Router, type Request, type Response } from 'express';
 const router = Router();
 
-export const APIKey = "48b4a4b00f2624dc5599df05bf063914";
+const APIKey = "48b4a4b00f2624dc5599df05bf063914";
 
 import HistoryService from '../../service/historyService.js';
 import WeatherService from '../../service/weatherService.js';
