@@ -15,7 +15,7 @@ class City {
 
 class HistoryService {
   private async read() {
-    return await fs.readFile('searchHistory.json', {
+    return await fs.readFile('db.json', {
       flag: 'a+',
       encoding: 'utf8',
     });
@@ -23,7 +23,7 @@ class HistoryService {
   }
 
   private async write(cities: City[]) {
-    return await fs.writeFile('searchHistory.json', JSON.stringify(cities, null, '\t'));
+    return await fs.writeFile('db.json', JSON.stringify(cities, null, '\t'));
   }
 
   async getCities() {
